@@ -13,6 +13,11 @@ class CategoryItem extends StatelessWidget {
         return CategoryMealsScreen();
       }),
     );
+
+    Navigator.of(context).pushNamed(
+      '/categories-meals',
+      arguments: category,
+    );
   }
 
   @override
