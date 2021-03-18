@@ -38,4 +38,28 @@ class Meal {
     @required this.complexity,
     @required this.cost,
   });
+
+  String get complexityText {
+    if (complexity == Complexity.Simple) {
+      return 'Simples';
+    } else if (complexity == Complexity.Medium) {
+      return 'Normal';
+    } else if (complexity == Complexity.Difficult) {
+      return 'Difícil';
+    } else {
+      return 'Desconhecida';
+    }
+  }
+
+  String get costText {
+    if (cost == Cost.Cheap) {
+      return 'Barato';
+    } else if (cost == Cost.Fair) {
+      return 'Justo';
+    } else if (cost == Cost.Expensive) {
+      return 'Caro';
+    } else {
+      return 'Desconhecido';
+    }
+  }
 }
